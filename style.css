@@ -1,31 +1,53 @@
 :root {
   color-scheme: light;
   font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-alt: #eef3fb;
+  --text: #18212f;
+  --muted: #516078;
+  --border: #d8deea;
+  --accent: #204f8c;
+  --shadow: 0 18px 40px rgba(25, 41, 69, 0.08);
+  --content-width: min(1120px, calc(100vw - 2rem));
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: #f7f8fb;
-  color: #18212f;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.25rem 2rem;
-  background: #ffffff;
-  border-bottom: 1px solid #d8deea;
+  padding: 1rem max(1rem, calc((100vw - var(--content-width)) / 2));
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 }
 
 .site-brand {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .site-name {
@@ -35,17 +57,18 @@ body {
 
 .site-affiliation {
   font-size: 0.95rem;
-  color: #516078;
+  color: var(--muted);
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: flex-end;
+  gap: 0.85rem 1rem;
 }
 
 .site-nav a {
-  color: inherit;
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
 }
@@ -57,43 +80,146 @@ body {
 }
 
 .language-toggle {
-  border: 1px solid #d8deea;
-  background: #ffffff;
-  color: inherit;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
   border-radius: 999px;
-  padding: 0.55rem 0.9rem;
+  padding: 0.6rem 0.95rem;
   font: inherit;
   cursor: pointer;
 }
 
-main {
-  padding: 2rem;
+.page-shell {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
 }
 
-section {
-  min-height: 8rem;
-  padding: 2rem 0;
+.hero {
+  padding: 2rem 0 3rem;
 }
 
-.section-card {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #d8deea;
-  border-radius: 8px;
-  background: #ffffff;
+.hero-copy,
+.section-card,
+.student-outcomes,
+.publication-list,
+.contact-grid,
+.teaching-grid,
+.card-grid,
+.students-grid {
+  min-width: 0;
 }
 
-.section-card h3 {
-  margin-top: 0;
+.hero-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
 }
 
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.hero-name-english,
+.hero-title,
+.hero-subtitle,
+.hero-welcome {
+  margin: 0.75rem 0 0;
+}
+
+.hero-name-english {
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.hero-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.hero-subtitle,
+.hero-welcome {
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.content-section {
+  padding: 1.5rem 0 0;
+}
+
+.section-heading h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.card-grid,
+.students-grid,
+.contact-grid,
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.section-card,
+.publication-list,
 .student-outcomes {
-  padding: 1rem;
-  border: 1px solid #d8deea;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: #ffffff;
+  box-shadow: var(--shadow);
 }
 
+.section-card h3,
 .student-outcomes h3 {
   margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.section-card p,
+.section-card li,
+.student-outcomes p,
+.publication-list li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.publication-list {
+  padding-left: 2.25rem;
+}
+
+@media (max-width: 900px) {
+  .site-header,
+  .site-header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-grid,
+  .students-grid,
+  .contact-grid,
+  .teaching-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .page-shell {
+    width: min(100vw - 1rem, 1120px);
+    padding-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
