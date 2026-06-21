@@ -1,0 +1,60 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f8fb;
+  color: #18212f;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #d8deea;
+}
+
+.site-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.site-affiliation {
+  font-size: 0.95rem;
+  color: #516078;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  min-height: 8rem;
+  padding: 2rem 0;
+}
