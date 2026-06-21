@@ -86,3 +86,14 @@ section {
 .section-card h3 {
   margin-top: 0;
 }
+
+.student-outcomes {
+  padding: 1rem;
+  border: 1px solid #d8deea;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.student-outcomes h3 {
+  margin-top: 0;
+}

@@ -6,6 +6,7 @@ export const siteContent = {
       research: '研究方向',
       publications: '代表性成果',
       teaching: '教学',
+      students: '学生',
       contact: '联系'
     },
     hero: {
@@ -47,6 +48,21 @@ export const siteContent = {
       undergraduate: ['现代优化算法', '复变函数', '数值分析', '凸分析', '微分方程数值解', '离散数学', '线性代数A'],
       graduate: ['非线性问题数值解', '矩阵计算', '最优化计算', '微分方程差分方法']
     },
+    students: {
+      prospectiveTitle: '拟联系学生',
+      opportunitiesTitle: '当前机会',
+      outcomesTitle: '毕业生与学生发展',
+      prospective: [
+        '欢迎希望开展科研训练、毕业设计或继续深造的本科生联系。',
+        '欢迎具有扎实数学基础并希望申请硕士或博士阶段研究的同学联系。',
+        '联系时建议附上简历、成绩单以及感兴趣的研究方向。'
+      ],
+      opportunities: [
+        '可围绕反问题、波散射、谱理论和数值计算开展本科生科研训练。',
+        '欢迎对理论分析与数值方法结合感兴趣的研究生申请者交流。'
+      ],
+      outcomesEmptyState: '学生去向信息将在最终确认后补充。'
+    },
     contact: {
       emailLabel: '电子邮箱',
       email: 'diao@jlu.edu.cn',
@@ -66,6 +82,7 @@ export const siteContent = {
       research: 'Research',
       publications: 'Selected Publications',
       teaching: 'Teaching',
+      students: 'Students',
       contact: 'Contact'
     },
     hero: {
@@ -106,6 +123,21 @@ export const siteContent = {
       graduateTitle: 'Graduate Courses',
       undergraduate: ['Modern Optimization Algorithms', 'Complex Analysis', 'Numerical Analysis', 'Convex Analysis', 'Numerical Methods for Differential Equations', 'Discrete Mathematics', 'Linear Algebra A'],
       graduate: ['Numerical Methods for Nonlinear Problems', 'Matrix Computation', 'Computational Optimization', 'Difference Methods for Differential Equations']
+    },
+    students: {
+      prospectiveTitle: 'Prospective Students',
+      opportunitiesTitle: 'Current Opportunities',
+      outcomesTitle: 'Alumni / Student Outcomes',
+      prospective: [
+        'Undergraduates interested in research training, graduation projects, or future graduate study are welcome to reach out.',
+        'Master’s and PhD applicants with strong mathematical foundations are encouraged to get in touch.',
+        'Please include a CV, transcript, and a short note about your research interests in the first email.'
+      ],
+      opportunities: [
+        'Potential topics include inverse problems, wave scattering, spectral theory, and numerical computation.',
+        'Students interested in combining rigorous analysis with computational methods are especially welcome.'
+      ],
+      outcomesEmptyState: 'Student outcome records will be added after final confirmation.'
     },
     contact: {
       emailLabel: 'Email',

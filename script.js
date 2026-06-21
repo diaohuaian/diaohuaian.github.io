@@ -59,6 +59,25 @@ function renderContact(copy) {
   `;
 }
 
+function renderStudentSection(copy) {
+  return `
+    <div class="students-grid">
+      <article class="section-card">
+        <h3>${copy.students.prospectiveTitle}</h3>
+        <ul>${renderList(copy.students.prospective)}</ul>
+      </article>
+      <article class="section-card">
+        <h3>${copy.students.opportunitiesTitle}</h3>
+        <ul>${renderList(copy.students.opportunities)}</ul>
+      </article>
+    </div>
+    <div class="student-outcomes">
+      <h3>${copy.students.outcomesTitle}</h3>
+      <p>${copy.students.outcomesEmptyState}</p>
+    </div>
+  `;
+}
+
 function render(language) {
   const copy = siteContent[language];
 
@@ -77,11 +96,13 @@ function render(language) {
   document.querySelector('[data-research-title]').textContent = copy.sectionTitles.research;
   document.querySelector('[data-publications-title]').textContent = copy.sectionTitles.publications;
   document.querySelector('[data-teaching-title]').textContent = copy.sectionTitles.teaching;
+  document.querySelector('[data-students-title]').textContent = copy.sectionTitles.students;
   document.querySelector('[data-contact-title]').textContent = copy.sectionTitles.contact;
 
   document.querySelector('[data-research-list]').innerHTML = renderCards(copy.research);
   document.querySelector('[data-publication-list]').innerHTML = renderList(copy.publications);
   document.querySelector('[data-teaching-content]').innerHTML = renderTeaching(copy);
+  document.querySelector('[data-students-content]').innerHTML = renderStudentSection(copy);
   document.querySelector('[data-contact-content]').innerHTML = renderContact(copy);
 }
 
