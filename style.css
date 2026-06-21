@@ -50,6 +50,22 @@ body {
   font-weight: 600;
 }
 
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-toggle {
+  border: 1px solid #d8deea;
+  background: #ffffff;
+  color: inherit;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font: inherit;
+  cursor: pointer;
+}
+
 main {
   padding: 2rem;
 }
@@ -57,4 +73,16 @@ main {
 section {
   min-height: 8rem;
   padding: 2rem 0;
+}
+
+.section-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d8deea;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.section-card h3 {
+  margin-top: 0;
 }
