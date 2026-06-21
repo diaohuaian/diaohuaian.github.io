@@ -21,7 +21,7 @@ npm run test:e2e
 ## Content updates
 
 - Edit bilingual copy in `content.js`.
-- Replace the profile photo in `assets/profile-photo.jpg` after it is added.
+- Replace the profile photo in `assets/profile-photo.png`.
 - Update styling in `style.css`.
 
 ## Publish

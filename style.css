@@ -96,10 +96,15 @@ a {
 }
 
 .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
   padding: 2rem 0 3rem;
 }
 
 .hero-copy,
+.hero-media,
 .section-card,
 .student-outcomes,
 .publication-list,
@@ -144,6 +149,21 @@ a {
   color: var(--muted);
   max-width: 62ch;
   line-height: 1.7;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--surface);
 }
 
 .content-section {
@@ -200,6 +220,7 @@ a {
     align-items: flex-start;
   }
 
+  .hero,
   .card-grid,
   .students-grid,
   .contact-grid,

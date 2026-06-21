@@ -5,6 +5,7 @@ test('renders the site shell with anchor navigation', async ({ page }) => {
 
   await expect(page).toHaveTitle(/Huaian Diao/);
   await expect(page.getByRole('navigation', { name: 'Primary' })).toBeVisible();
+  await expect(page.locator('[data-profile-image]')).toBeVisible();
   await expect(page.locator('nav[aria-label="Primary"] a')).toHaveCount(6);
   await expect(page.locator('nav[aria-label="Primary"] a').nth(0)).toHaveAttribute('href', '#home');
   await expect(page.locator('nav[aria-label="Primary"] a').nth(1)).toHaveAttribute('href', '#research');
