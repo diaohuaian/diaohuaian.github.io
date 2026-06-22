@@ -210,7 +210,25 @@ a {
 }
 
 .publication-list {
+  margin: 0;
   padding-left: 2.25rem;
+}
+
+.publication-list li {
+  overflow-wrap: anywhere;
+}
+
+.publication-list li + li {
+  margin-top: 0.75rem;
+}
+
+.publication-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.publication-list a:hover {
+  text-decoration: underline;
 }
 
 .outcomes-table-wrapper {

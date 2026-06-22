@@ -18,7 +18,25 @@ function renderCards(items) {
 }
 
 function renderList(items) {
-  return items.map((item) => `<li>${item}</li>`).join('');
+  return items
+    .map((item) => {
+      if (typeof item === 'string') {
+        return `<li>${item}</li>`;
+      }
+
+      if (item && typeof item === 'object') {
+        const text = item.text ?? '';
+
+        if (item.href) {
+          return `<li><a href="${item.href}" target="_blank" rel="noreferrer">${text}</a></li>`;
+        }
+
+        return `<li>${text}</li>`;
+      }
+
+      return `<li>${item}</li>`;
+    })
+    .join('');
 }
 
 function renderTeaching(copy) {
