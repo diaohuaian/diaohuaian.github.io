@@ -52,6 +52,7 @@ export const siteContent = {
       prospectiveTitle: '拟联系学生',
       opportunitiesTitle: '当前机会',
       outcomesTitle: '毕业生与学生发展',
+      tableHeaders: ['姓名', '培养层次', '培养时间', '毕业去向'],
       prospective: [
         '欢迎希望开展科研训练、毕业设计或继续深造的本科生联系。',
         '欢迎具有扎实数学基础并希望申请硕士或博士阶段研究的同学联系。',
@@ -61,7 +62,36 @@ export const siteContent = {
         '可围绕反问题、波散射、谱理论和数值计算开展本科生科研训练。',
         '欢迎对理论分析与数值方法结合感兴趣的研究生申请者交流。'
       ],
-      outcomesEmptyState: '学生去向信息将在最终确认后补充。'
+      outcomes: [
+        {
+          name: '孟庆乐',
+          level: '硕士',
+          period: '2015.09-2018.06',
+          destinations: [
+            '厦门大学博士生（2018.09-2022.06）',
+            '香港城市大学博士后（2022.09-2026.05）',
+            '大连理工大学副教授（2026.06-至今）'
+          ]
+        },
+        {
+          name: '费晓旭',
+          level: '硕士',
+          period: '2019.09-2022.06',
+          destinations: [
+            '中南大学博士生（2022.09-2026.06）',
+            '香港城市大学博士联合培养（2024.09-2026.06）'
+          ]
+        },
+        {
+          name: '王丽',
+          level: '硕士',
+          period: '2018.09-2021.06',
+          destinations: [
+            '香港浸会大学数学系研究助理（2021.09-2022.05）',
+            '香港城市大学数学系博士研究生（2022.09-至今）'
+          ]
+        }
+      ]
     },
     contact: {
       emailLabel: '电子邮箱',
@@ -128,6 +158,7 @@ export const siteContent = {
       prospectiveTitle: 'Prospective Students',
       opportunitiesTitle: 'Current Opportunities',
       outcomesTitle: 'Alumni / Student Outcomes',
+      tableHeaders: ['Name', 'Training Level', 'Training Period', 'Placement'],
       prospective: [
         'Undergraduates interested in research training, graduation projects, or future graduate study are welcome to reach out.',
         'Master’s and PhD applicants with strong mathematical foundations are encouraged to get in touch.',
@@ -137,7 +168,36 @@ export const siteContent = {
         'Potential topics include inverse problems, wave scattering, spectral theory, and numerical computation.',
         'Students interested in combining rigorous analysis with computational methods are especially welcome.'
       ],
-      outcomesEmptyState: 'Student outcome records will be added after final confirmation.'
+      outcomes: [
+        {
+          name: 'Qingle Meng',
+          level: 'Master’s',
+          period: '2015.09-2018.06',
+          destinations: [
+            'PhD student, Xiamen University (2018.09-2022.06)',
+            'Postdoctoral Fellow, City University of Hong Kong (2022.09-2026.05)',
+            'Associate Professor, Dalian University of Technology (2026.06-present)'
+          ]
+        },
+        {
+          name: 'Xiaoxu Fei',
+          level: 'Master’s',
+          period: '2019.09-2022.06',
+          destinations: [
+            'PhD student, Central South University (2022.09-2026.06)',
+            'Joint PhD training, City University of Hong Kong (2024.09-2026.06)'
+          ]
+        },
+        {
+          name: 'Li Wang',
+          level: 'Master’s',
+          period: '2018.09-2021.06',
+          destinations: [
+            'Research Assistant, Department of Mathematics, Hong Kong Baptist University (2021.09-2022.05)',
+            'PhD student, Department of Mathematics, City University of Hong Kong (2022.09-present)'
+          ]
+        }
+      ]
     },
     contact: {
       emailLabel: 'Email',

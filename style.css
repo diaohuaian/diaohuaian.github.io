@@ -213,6 +213,38 @@ a {
   padding-left: 2.25rem;
 }
 
+.outcomes-table-wrapper {
+  overflow-x: auto;
+}
+
+.outcomes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.outcomes-table th,
+.outcomes-table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.outcomes-table th {
+  color: var(--text);
+  background: var(--surface-alt);
+  white-space: nowrap;
+}
+
+.outcome-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.outcome-list li {
+  margin-bottom: 0.35rem;
+}
+
 @media (max-width: 900px) {
   .site-header,
   .site-header-actions {

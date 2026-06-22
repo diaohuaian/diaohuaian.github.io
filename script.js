@@ -59,7 +59,57 @@ function renderContact(copy) {
   `;
 }
 
+function renderNestedList(items, className = '') {
+  const listClass = className ? ` class="${className}"` : '';
+  return `<ul${listClass}>${renderList(items)}</ul>`;
+}
+
+function renderOutcomeRows(outcomes) {
+  return outcomes
+    .map(
+      (item) => `
+        <tr data-student-outcome-row>
+          <td>${item.name}</td>
+          <td>${item.level}</td>
+          <td>${item.period}</td>
+          <td>${renderNestedList(item.destinations, 'outcome-list')}</td>
+        </tr>
+      `
+    )
+    .join('');
+}
+
 function renderStudentSection(copy) {
+  const outcomes = copy.students.outcomes;
+
+  if (outcomes && outcomes.length > 0) {
+    return `
+      <div class="students-grid">
+        <article class="section-card">
+          <h3>${copy.students.prospectiveTitle}</h3>
+          <ul>${renderList(copy.students.prospective)}</ul>
+        </article>
+        <article class="section-card">
+          <h3>${copy.students.opportunitiesTitle}</h3>
+          <ul>${renderList(copy.students.opportunities)}</ul>
+        </article>
+      </div>
+      <div class="student-outcomes">
+        <h3>${copy.students.outcomesTitle}</h3>
+        <div class="outcomes-table-wrapper">
+          <table class="outcomes-table">
+            <thead>
+              <tr>
+                ${copy.students.tableHeaders.map((label) => `<th scope="col">${label}</th>`).join('')}
+              </tr>
+            </thead>
+            <tbody>${renderOutcomeRows(outcomes)}</tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
   return `
     <div class="students-grid">
       <article class="section-card">
