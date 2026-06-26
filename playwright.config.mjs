@@ -1,10 +1,13 @@
 import { defineConfig } from '@playwright/test';
 
+const browserChannel = process.env.PLAYWRIGHT_BROWSER_CHANNEL;
+
 export default defineConfig({
   testDir: './tests',
   timeout: 30_000,
   use: {
-    baseURL: 'http://127.0.0.1:4173'
+    baseURL: 'http://127.0.0.1:4173',
+    ...(browserChannel ? { channel: browserChannel } : {})
   },
   webServer: {
     command: 'python3 -m http.server 4173 --bind 127.0.0.1',

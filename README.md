@@ -18,6 +18,12 @@ Open [http://127.0.0.1:4173](http://127.0.0.1:4173).
 npm run test:e2e
 ```
 
+If Playwright browser downloads are unavailable but Google Chrome is already installed locally, run:
+
+```bash
+PLAYWRIGHT_BROWSER_CHANNEL=chrome npm run test:e2e
+```
+
 ## Content updates
 
 - Edit bilingual copy in `content.js`.
