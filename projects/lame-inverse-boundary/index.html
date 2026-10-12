@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#204f8c">
+    <meta name="description" content="Unique Determination of the Lamé Parameters in Three Dimensions, a jointly authored research preprint on isotropic elasticity inverse boundary uniqueness and its research history.">
+    <title>Unique Determination of the Lamé Parameters in Three Dimensions</title>
+    <link rel="canonical" href="https://diaohuaian.github.io/projects/lame-inverse-boundary/">
+    <link rel="stylesheet" href="./project.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="site-brand" href="/" aria-label="Huaian Diao's academic homepage">
+          <span class="brand-mark" aria-hidden="true">HD</span>
+          <span><strong>Huaian Diao</strong><span class="brand-subtitle">Academic homepage</span></span>
+        </a>
+        <nav class="topnav" aria-label="Primary project navigation">
+          <a href="#abstract">Abstract</a>
+          <a href="#main-result">Main Result</a>
+          <a href="#approach">Approach</a>
+          <a href="#history">Research History</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="wrap hero">
+        <div class="hero-main">
+          <p class="eyebrow"><span aria-hidden="true"></span>Research preprint · Inverse boundary value problems</p>
+          <h1>Unique Determination of the Lamé Parameters in Three Dimensions</h1>
+          <p class="authors">Huaian Diao <span class="author-and">·</span> Umidjon Durdiev</p>
+          <p class="research-topics">Joint mathematical research</p>
+          <p class="hero-description">Global uniqueness for smooth Lamé parameters in three dimensions, using physical CGO solutions, complete matrix moment identities, and relative quotient transport.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://zenodo.org/records/23278537">Read the preprint <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#abstract">Read the abstract <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-record">Version 1 <span aria-hidden="true">·</span> Zenodo, 10 October 2026 <span aria-hidden="true">·</span> CC BY 4.0</p>
+        </div>
+        <figure class="boundary-figure">
+          <div class="figure-heading"><span>The inverse question</span><span>ℝ³</span></div>
+          <svg class="domain-diagram" viewBox="0 0 360 245" role="img" aria-labelledby="diagram-title diagram-description">
+            <title id="diagram-title">Boundary measurements and interior Lamé parameters</title>
+            <desc id="diagram-description">A schematic smooth three-dimensional domain, labelled Omega, contains the coefficient fields lambda and mu. Boundary data are measured on its boundary, labelled partial Omega. This is an illustration of the inverse question.</desc>
+            <defs>
+              <linearGradient id="domain-fill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e8f0fa"/>
+                <stop offset="1" stop-color="#d2e0f1"/>
+              </linearGradient>
+            </defs>
+            <path d="M70 116C51 70 88 36 130 40C171 15 226 38 245 83C281 113 265 172 222 191C176 216 118 192 94 165C82 150 77 134 70 116Z" fill="url(#domain-fill)" stroke="#204f8c" stroke-width="2"/>
+            <path d="M77 113C125 159 187 55 255 113M95 166C127 98 193 185 247 147" fill="none" stroke="#a3bad5" stroke-width="1.5" stroke-dasharray="5 7"/>
+            <path d="M133 41C119 87 122 156 157 200M213 45C175 84 196 150 222 191" fill="none" stroke="#b4c7df" stroke-width="1.2"/>
+            <circle cx="72" cy="113" r="4" fill="#204f8c"/>
+            <circle cx="245" cy="83" r="4" fill="#204f8c"/>
+            <circle cx="248" cy="147" r="4" fill="#204f8c"/>
+            <path d="M245 83L278 57M72 113L38 113M248 147L284 169" fill="none" stroke="#204f8c" stroke-width="1.5"/>
+            <g fill="#204f8c" font-family="Georgia, serif">
+              <text x="285" y="55" font-size="18">∂Ω</text>
+              <text x="158" y="99" font-size="28">Ω</text>
+              <text x="137" y="136" font-size="21">λ(x), μ(x)</text>
+            </g>
+          </svg>
+          <div class="recovery-schematic" aria-label="Full boundary Dirichlet-to-Neumann map determines lambda and mu">
+            <span>Λ<sub>λ, μ</sub></span><span class="schematic-arrow" aria-hidden="true">⟶</span><span>(λ, μ)</span>
+          </div>
+          <figcaption>Can full boundary measurements uniquely determine both elastic parameters inside the domain?</figcaption>
+          <p class="figure-note">Schematic illustration of the inverse problem</p>
+        </figure>
+      </div>
+
+      <div class="scope-strip">
+        <dl class="wrap scope-grid">
+          <div><dt>Model</dt><dd>Static isotropic elasticity</dd></div>
+          <div><dt>Measurements</dt><dd>Full Dirichlet-to-Neumann map</dd></div>
+          <div><dt>Unknowns</dt><dd>λ(x) and μ(x)</dd></div>
+          <div><dt>Domain</dt><dd>Bounded and smooth in ℝ³</dd></div>
+        </dl>
+      </div>
+
+      <div class="wrap page-content">
+        <nav class="section-index" aria-label="All project sections">
+          <span class="index-label">On this page</span>
+          <ol>
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#main-result">Main Result</a></li>
+            <li><a href="#approach">Mathematical Approach</a></li>
+            <li><a href="#publications">Publications and Links</a></li>
+            <li><a href="#history">Research History and Independent Development</a></li>
+            <li><a href="#provenance">Provenance and Limitations</a></li>
+            <li><a href="#related">Related Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <section class="content-section" id="abstract" aria-labelledby="abstract-title">
+          <div class="section-heading"><p class="section-number">01 / The current preprint</p><h2 id="abstract-title">Abstract</h2></div>
+          <div class="section-body">
+            <p>We prove that the full Dirichlet-to-Neumann map for static isotropic elasticity uniquely determines both smooth Lamé parameters in a bounded smooth domain of ℝ³ under strong convexity. The proof uses an exact four-component Laplace-type reduction, while its decisive identities are obtained from physical elastic solutions.</p>
+            <p>The characteristic quotient of the reduced system has rank three, whereas the leading physical adjoint lift supplies only two directions. We construct the missing polarization from the first nonvanishing correction of a reduced amplitude in the kernel of that lift. Paired with fixed primal and adjoint quotient frames, the resulting complex geometrical optics solutions yield a complete family of holomorphically weighted 3 × 3 matrix moments through the physical Betti identity. Cauchy–Plemelj factorization converts these moments into an invertible relative transport normalized in the common exterior. Holomorphic dependence on the projective null direction and transport rigidity then determine both Lamé parameters.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="main-result" aria-labelledby="result-title">
+          <div class="section-heading"><p class="section-number">02 / The main theorem</p><h2 id="result-title">Main Result</h2></div>
+          <div class="section-body">
+            <div class="result-panel">
+              <p class="panel-label">Global uniqueness stated in the manuscript</p>
+              <p>The principal result <strong>stated in the current preprint</strong> is that equality of the full Dirichlet-to-Neumann maps for two admissible pairs forces both Lamé parameters to agree in the domain:</p>
+              <div class="math-scroll result-equation">
+                <math display="block" aria-label="Equality of Lambda lambda one mu one and Lambda lambda two mu two implies lambda one equals lambda two and mu one equals mu two">
+                  <msub><mi>Λ</mi><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>μ</mi><mn>1</mn></msub></mrow></msub><mo>=</mo><msub><mi>Λ</mi><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>,</mo><msub><mi>μ</mi><mn>2</mn></msub></mrow></msub><mo>⟹</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>,</mo><mspace width="0.5em"/><msub><mi>μ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>μ</mi><mn>2</mn></msub><mo>.</mo>
+                </math>
+              </div>
+            </div>
+            <p>The formulation allows the boundary of the domain to have more than one connected component and imposes no smallness, symmetry, separability, or analyticity assumption on the coefficient pair. Full hypotheses, proof statements and technical details are in the manuscript.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="approach" aria-labelledby="approach-title">
+          <div class="section-heading"><p class="section-number">03 / Proof structure</p><h2 id="approach-title">Mathematical Approach</h2></div>
+          <div class="section-body">
+            <p>The proof in the joint manuscript is organized around a four-component Laplace-type reduction of the Lamé system and a rank-three characteristic quotient. A central difficulty is that the leading physical adjoint lift supplies only two independent directions. The missing third polarization is produced from the first nonvanishing correction of a reduced amplitude lying in the kernel of the leading lift.</p>
+            <p>Exact physical elastic solutions, paired with fixed primal and adjoint quotient frames, then provide holomorphically weighted 3 × 3 matrix moment identities through the physical Betti identity. A Cauchy–Plemelj construction converts those moments into an invertible relative transport normalized in a common exterior region. Projective holomorphicity and rigidity of the quotient transport supply the final identification of the material parameters.</p>
+            <div class="method-path" aria-label="Key stages of the mathematical approach">
+              <div><span class="method-step">I</span><strong>Elastic solutions</strong><span>Reduction and characteristic quotient</span></div>
+              <div><span class="method-step">II</span><strong>Matrix moments</strong><span>Physical Betti identity</span></div>
+              <div><span class="method-step">III</span><strong>Transport rigidity</strong><span>Cauchy–Plemelj construction</span></div>
+            </div>
+            <p class="muted-note">This description is a guide to the manuscript's mathematical structure; readers should consult the preprint for the exact definitions, estimates, and arguments.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="publications" aria-labelledby="publications-title">
+          <div class="section-heading"><p class="section-number">04 / Scholarly records</p><h2 id="publications-title">Publications and Links</h2></div>
+          <div class="section-body">
+            <article class="publication-card primary-publication">
+              <p class="panel-label">Primary archival record</p>
+              <h3>Zenodo preprint</h3>
+              <p><cite>Unique Determination of the Lamé Parameters in Three Dimensions</cite><br>Huaian Diao and Umidjon Durdiev</p>
+              <dl class="record-details">
+                <div><dt>Version</dt><dd>1</dd></div>
+                <div><dt>Published</dt><dd><time datetime="2026-10-10">10 October 2026</time></dd></div>
+                <div><dt>License</dt><dd>CC BY 4.0</dd></div>
+              </dl>
+              <div class="publication-links"><a href="https://zenodo.org/records/23278537">View preprint record <span aria-hidden="true">↗</span></a><a href="https://doi.org/10.5281/zenodo.23278537">DOI: 10.5281/zenodo.23278537 <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <div class="secondary-records">
+              <article class="publication-card"><p class="panel-label">Secondary research listing</p><h3>ResearchGate</h3><p>A secondary listing of the joint preprint; Zenodo is the primary archival record.</p><a href="https://www.researchgate.net/publication/415532572_Unique_Determination_of_the_Lame_Parameters_in_Three_Dimensions">View research listing <span aria-hidden="true">↗</span></a></article>
+              <article class="publication-card"><p class="panel-label">Submission status</p><h3>arXiv</h3><p>The authors report submission of the manuscript to arXiv. A public arXiv link will be added after public announcement.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="history" aria-labelledby="history-title">
+          <div class="section-heading"><p class="section-number">05 / Research record</p><h2 id="history-title">Research History and Independent Development</h2></div>
+          <div class="section-body">
+            <p>According to retained file records, an early research draft prepared by Umidjon Durdiev was saved on <strong>October 3, 2026 (UTC; October 4, China Standard Time)</strong>, before the announced public release of the related OpenAI mathematical research collection on October 6, 2026.</p>
+            <p>This preliminary manuscript formulated a global uniqueness statement for the three-dimensional unit ball and developed key elements of the approach, including a four-component Laplace-type reduction, a rank-three physical quotient, the construction of an additional physical adjoint polarization, matrix moment identities, Cauchy–Plemelj relative transport, and rigidity of the Lamé quotient connection.</p>
+            <p>The research subsequently developed into the jointly authored paper <strong><cite>Unique Determination of the Lamé Parameters in Three Dimensions</cite></strong>, by <strong>Huaian Diao and Umidjon Durdiev</strong>. The collaborative mathematical development substantially strengthened and extended the original framework. The final manuscript establishes its main theorem for general bounded smooth domains and presents a substantially expanded proof, including refined CGO constructions and Sobolev remainder estimates, the realization of a complete physical adjoint frame, rigorous derivation of the full matrix moment identities, the construction of an exterior-normalized relative transport, and boundary determination to arbitrary order.</p>
+            <p>The final mathematical arguments, their verification, and the presentation of the results are the responsibility of both authors. The present paper represents their joint mathematical research.</p>
+            <p class="chronology-intro">The historical materials document the early private development of the research and the subsequent evolution of the manuscript. They do not establish an earlier date of public dissemination or constitute an independent determination of comparative scientific priority.</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="provenance" aria-labelledby="provenance-title">
+          <div class="section-heading"><p class="section-number">06 / Reading the record</p><h2 id="provenance-title">Provenance and Limitations</h2></div>
+          <div class="section-body">
+            <p>The historical materials are preserved to document the development of the research. The early drafts were prepared by <strong>Umidjon Durdiev</strong>; the present manuscript is a jointly authored work of <strong>Huaian Diao and Umidjon Durdiev</strong>. Authorship of the current paper is determined by the authors' scholarly contributions, not by the account that hosts the archive.</p>
+            <h3>How these records should be understood</h3>
+            <p>Checksums identify specific file contents and permit byte-for-byte comparison. File-system metadata, PDF metadata, and historical-interface screenshots supply useful contextual records, each with its own limitations. Uploading a file to GitHub or Zenodo now establishes the later public availability of that file; it does <strong>not</strong> convert its earlier private save date into a prior public release. Neither the archived files nor this webpage independently establishes the completeness or correctness of the historical proofs, the start dates of other researchers' work, or comparative scientific priority.</p>
+            <div class="availability-note">
+              <h3>Availability of supporting materials</h3>
+              <p>The original historical drafts, evidence files, and screenshots are held privately and are not downloadable from this page. Selected historical records may be made available in a separately reviewed research archive with the consent of both authors. Requests for access to sensitive original evidence may be considered by the authors individually.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="related" aria-labelledby="related-title">
+          <div class="section-heading"><p class="section-number">07 / Context</p><h2 id="related-title">Related Research</h2></div>
+          <div class="section-body">
+            <p>The joint manuscript discusses the related OpenAI preprint and the differences between its analytical construction and the approach pursued here. Both address smooth three-dimensional isotropic elasticity inverse boundary uniqueness. This page documents the earlier <strong>private development</strong> of a draft approach and identifies the public sources relevant to its research history; it is not intended as a statement that either research group has been adjudicated to hold scientific priority.</p>
+            <p>For the precise comparison of assumptions, proofs, and results, please consult the two manuscripts.</p>
+            <p class="related-links"><a href="https://zenodo.org/records/23278537">Diao–Durdiev preprint <span aria-hidden="true">↗</span></a><a href="https://github.com/openai/math/commit/adc7f1241b42e322a6451854ab7e4b4c146bf78a">OpenAI mathematics collection <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </section>
+
+        <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
+          <div class="section-heading"><p class="section-number">08 / Scholarly correspondence</p><h2 id="contact-title">Contact</h2></div>
+          <div class="section-body">
+            <div class="contact-authors"><p><strong>Huaian Diao</strong><br><a href="/">Academic homepage</a><br><a href="/#contact">Homepage contact section</a></p><p><strong>Umidjon Durdiev</strong><br><span>Coauthor; affiliations as stated in the current manuscript.</span></p></div>
+            <p class="current-version">Current manuscript version: Zenodo version 1, published 10 October 2026. <a href="https://doi.org/10.5281/zenodo.23278537">DOI: 10.5281/zenodo.23278537</a>.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer"><div class="wrap footer-inner"><div><strong>Huaian Diao · Umidjon Durdiev</strong><p>Three-dimensional isotropic elasticity · Research project</p></div><a href="/">← Return to the academic homepage</a></div></footer>
+  </body>
+</html>
